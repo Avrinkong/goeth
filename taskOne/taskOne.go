@@ -1,4 +1,4 @@
-package taskOne
+package main
 
 import (
 	"context"
@@ -36,8 +36,8 @@ func Task1() {
 		log.Fatal(err)
 	}
 
-	value := big.NewInt(1000000000000000000) // in wei (1 eth)
-	gasLimit := uint64(21000)                // in units
+	value := big.NewInt(10000000000000000) // in wei (1 eth)
+	gasLimit := uint64(21000)              // in units
 	gasPrice, err := client.SuggestGasPrice(context.Background())
 	if err != nil {
 		log.Fatal(err)
